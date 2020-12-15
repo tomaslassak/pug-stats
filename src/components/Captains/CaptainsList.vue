@@ -56,10 +56,10 @@ export default {
     };
   },
   created() {
-    this.fetchLogs();
+    this.fetchCaptains();
   },
   methods: {
-    fetchLogs: async function () {
+    fetchCaptains: async function () {
       const res = await fetch(`${process.env.VUE_APP_API_PATH}/api/captains`);
       const docs = await res.json();
       this.captain_array = docs;

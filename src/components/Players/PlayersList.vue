@@ -56,10 +56,10 @@ export default {
     };
   },
   created() {
-    this.fetchLogs();
+    this.fetchPlayers();
   },
   methods: {
-    fetchLogs: async function () {
+    fetchPlayers: async function () {
       const res = await fetch(`${process.env.VUE_APP_API_PATH}/api/players`);
       const docs = await res.json();
       this.player_array = docs;

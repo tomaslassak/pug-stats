@@ -15,6 +15,19 @@ router.get("/", async (req, res, next) => {
       error: err
     });
   }
+});
+
+router.get("/:steamID64", async (req, res, next) => {
+  try {
+    const doc = await Player.findOne({ steamID64: req.params.steamID64 });
+    res.status(200).json(doc);
+  }
+  catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: err
+    });
+  }
 })
 
 module.exports = router;
