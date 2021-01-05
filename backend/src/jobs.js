@@ -22,7 +22,7 @@ async function updateDatabaseWithNewGames() {
   // maximum of 3 concurrent games on pugchamp
   let game_list = await pugchamp.scrapeListOfGames();
   game_list = game_list.filter(game => game.status === "completed");
-  game_list = game_list.slice(0, 3).reverse();////////////
+  game_list = game_list.slice(0, 15).reverse();////////////
   
   // scraping log id from the game detail page on pugchamp
   // cutting of logs from the list that are already stored in db

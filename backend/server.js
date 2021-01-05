@@ -62,7 +62,7 @@ app.listen(process.env.PORT || 3000, () => {
     jobs.updateDatabaseWithPugchampPlayerNames();
   });
 
-  cron.schedule("* * * * *", () => {
+  cron.schedule("1-59/2 * * * *", () => {
     console.log("CRON jobs.updateDatabaseWithNewGames()");
     jobs.updateDatabaseWithNewGames();
   });
