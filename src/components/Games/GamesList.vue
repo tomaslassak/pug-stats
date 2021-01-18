@@ -1,6 +1,6 @@
 <template>
   <div class="games-list">
-    todo mens
+    todo
   </div>
   
 </template>

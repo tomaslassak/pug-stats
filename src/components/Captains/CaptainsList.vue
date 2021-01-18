@@ -100,15 +100,21 @@ export default {
 .captains-list {
   display: flex;
   flex-direction: column;
-
-  padding: 1rem;
 }
 .captains-list-legend-wrapper {
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
 
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 3rem;
+
+  background: var(--background-nav-sub);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .captains-list-legend {
   text-align: center;

@@ -45,46 +45,62 @@ export default {
 }
 
 body {
-  --red: #fc5d7ecc;
-  --blue: #4691ffcc;
+    background: linear-gradient(90deg, #ff93a9, #74ccff);
+    background-size: 200% 200%;
 
-  background: var(--gradient-1), var(--gradient-2);
-  background-attachment: fixed;
-  
-  transition: all 0.25s ease-in-out;
+    -webkit-animation: AnimatedGradientBackground 10s ease infinite;
+    -moz-animation: AnimatedGradientBackground 10s ease infinite;
+    -o-animation: AnimatedGradientBackground 10s ease infinite;
+    animation: AnimatedGradientBackground 10s ease infinite;
+}
+
+@-webkit-keyframes AnimatedGradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimatedGradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimatedGradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimatedGradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .light-theme {
-  --primary: #f8f8f8;
-  --secondary: #e8e8e8;
   --text: #080808;
-  --banner: #ffffff88;
-
-  --gradient-1: linear-gradient(120deg, #fc5d7ecc, #00000000 50%);
-  --gradient-2: linear-gradient(-120deg, #4691ffcc, #00000000 50%);
-  background-color: white;
-
+  --background-primary:  rgba(255, 255, 255, 0.2);
+  --background-glass: linear-gradient(138deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  --background-nav-main: linear-gradient(93deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9) 100%);
+  --background-nav-sub: linear-gradient(93deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8) 100%);
 }
   
 .dark-theme {  
-  --secondary: #080808;
-  --primary: #181818;
   --text: #e8e8e8;
-  --banner: #00000066;
-
-  --gradient-1: linear-gradient(0deg, #000000ff, #00000000);
-  --gradient-2: linear-gradient(90deg, #fc5c7d88, #000, #3493e688);
-  background-color: black;
+  --background-primary: rgba(255, 255, 255, 0.05);
+  --background-glass: linear-gradient(138deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+  --background-nav-main: linear-gradient(93deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3) 100%);
+  --background-nav-sub: linear-gradient(93deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2) 100%);
 }
 </style>
 
 <style scoped>
 .app-container {
   max-width: 960px;
-  background-color: var(--secondary);
-
   margin: 0 auto;
 
-  /* outline: 5px solid rgba(0, 0, 0, 0.2); */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-left: solid 1px rgba(255, 255, 255, 0.5);
+  border-right: solid 1px rgba(255, 255, 255, 0.5);
+  background-image: var(--background-glass);
 }
 </style>

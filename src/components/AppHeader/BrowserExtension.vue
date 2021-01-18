@@ -31,7 +31,6 @@ export default {
 <style scoped>
 .browser-extension-link {
   cursor: pointer;
-  font-weight: bold;
   text-decoration: none;
 }
 </style>

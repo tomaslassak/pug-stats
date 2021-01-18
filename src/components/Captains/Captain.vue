@@ -35,8 +35,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-  background-color: var(--primary);
-  margin: 0.5rem 0;
+  background-color: var(--background-primary);
+  margin: 0.5rem;
   padding: 0.5rem 0;
 
   font-size: 1rem;

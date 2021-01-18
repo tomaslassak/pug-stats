@@ -1,6 +1,6 @@
 <template>
   <div class="stats-list">
-    todo mens
+    todo
   </div>
   
 </template>

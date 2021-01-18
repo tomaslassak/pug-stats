@@ -38,6 +38,5 @@ export default {
 <style scoped>
 .theme-switcher {
   cursor: pointer;
-  font-weight: bold;
 }
 </style>

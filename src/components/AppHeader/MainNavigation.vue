@@ -29,18 +29,16 @@ export default {
 
 <style scoped>
 .main-navigation {
-  position: relative;
-  top: 5rem;
-  
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 }
 .main-navigation a { 
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
 
-  padding: 1rem 0;
+  margin-right: 0.5rem;
+}
+.router-link-exact-active {
+  font-weight: bold;
 }
 </style>

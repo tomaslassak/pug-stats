@@ -2,21 +2,21 @@
   <nav class="utility-navigation">
     <ThemeSwitcher />
     <BrowserExtension />
-    <SteamLogin />
+    <!-- <SteamLogin /> -->
   </nav>
 </template>
 
 <script>
 import ThemeSwitcher from "./ThemeSwitcher.vue";
 import BrowserExtension from "./BrowserExtension.vue";
-import SteamLogin from "./SteamLogin.vue";
+// import SteamLogin from "./SteamLogin.vue";
 
 export default {
   name: "UtilityNavigation",
   components: {
     ThemeSwitcher,
     BrowserExtension,
-    SteamLogin
+    // SteamLogin
   },
   data() {
     return {
@@ -37,11 +37,8 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  height: 2rem;
-  padding: 0 1rem;
 }
 .utility-navigation span {
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 </style>

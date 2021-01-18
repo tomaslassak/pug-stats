@@ -1,7 +1,7 @@
 <template>
   <div class="app-header">
-    <UtilityNavigation />
     <MainNavigation />
+    <UtilityNavigation />
   </div>
 </template>
 
@@ -32,11 +32,19 @@ export default {
 
 <style scoped>
 .app-header {
-  height: 16rem;
-  
-  background-image: url("../../assets/metalworks3.jpg");
-  background-size: cover;
-  background-color: var(--banner);
-  background-blend-mode: overlay;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem 1rem 1rem 1rem;
+
+  background: var(--background-nav-main);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 </style>
