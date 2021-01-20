@@ -25,7 +25,7 @@ async function updateDatabaseWithNewGames() {
   game_list = game_list.slice(0, 3).reverse();////////////
   
   // scraping log id from the game detail page on pugchamp
-  // cutting of logs from the list that are already stored in db
+  // cutting off logs from the list that are already stored in db
   for await(let game of game_list) {
     game.log_id = await pugchamp.scrapeLogIDFromGame(game);
     game.isAlreadyInDB = await logs.isLogAlreadyInDB(game.log_id);
@@ -69,6 +69,12 @@ async function updateDatabaseWithNewGames() {
       logs.updatePlayerStats(player.steamID3, player.new_elo, blue.elo_change);
       logs.updatePlayerEloInLog(game.log_id, player.steamID3, player.elo, blue.elo_change);
     });
+
+    // updating players pug_name from log data
+    Object.entries(game.log_data.names).forEach(([steamID3, pug_name]) => {
+      logs.updatePlayerPugName(steamID3, pug_name);
+    });
+
 
 
     // captain elo

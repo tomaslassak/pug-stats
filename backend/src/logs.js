@@ -140,6 +140,20 @@ async function updatePlayerStats(steamID3, new_elo, elo_change) {
   }
 }
 
+async function updatePlayerPugName(steamID3, pug_name) {
+  try {
+    await Player.update({ steamID3: steamID3 }, {
+      $set: {
+        pug_name: pug_name
+      }
+    }, { upsert: true });
+
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
 async function updatePlayerEloInLog(log_id, steamID3, elo, elo_change) {
   try {
     await Log.update({ log_id: log_id }, {
@@ -210,6 +224,7 @@ exports.setPlayerListFromDB = setPlayerListFromDB;
 exports.createTeamLists = createTeamLists;
 exports.cutOffSubstitutePlayers = cutOffSubstitutePlayers;
 exports.updatePlayerStats = updatePlayerStats;
+exports.updatePlayerPugName = updatePlayerPugName;
 exports.updatePlayerEloInLog = updatePlayerEloInLog;
 exports.getCaptainEloFromDB = getCaptainEloFromDB;
 exports.updateCaptainStats = updateCaptainStats;

@@ -52,17 +52,17 @@ app.use(express.static("dist"));
 app.listen(process.env.PORT || 3000, () => {
   console.log("server started");
 
+  // cron.schedule("0 * * * *", () => {
+  //   console.log("CRON jobs.updateDatabaseWithPugchampPlayerNames()");
+  //   jobs.updateDatabaseWithPugchampPlayerNames();
+  // });
+
   cron.schedule("0 * * * *", () => {
     console.log("CRON etf2l.updateDatabaseWithEtf2lPlayerNames()");
     jobs.updateDatabaseWithEtf2lPlayerNames();
   });
 
-  cron.schedule("0 * * * *", () => {
-    console.log("CRON jobs.updateDatabaseWithPugchampPlayerNames()");
-    jobs.updateDatabaseWithPugchampPlayerNames();
-  });
-
-  cron.schedule("1-59/2 * * * *", () => {
+  cron.schedule("* * * * *", () => {
     console.log("CRON jobs.updateDatabaseWithNewGames()");
     jobs.updateDatabaseWithNewGames();
   });
