@@ -1,7 +1,7 @@
 <template>
   <li class="captain">
     <span>{{ `${index + 1}.`}}</span>
-    <span>{{ captain.etf2l_name}}</span>
+    <!-- <span>{{ captain.etf2l_name}}</span> -->
     <span>{{ captain.pug_name }}</span>
     <span>{{ captain.cap_elo.toFixed(2) }}</span>
     <span>{{ captain.cap_elo_change.toFixed(2)  }}</span>
@@ -33,7 +33,8 @@ export default {
 <style scoped>
 .captain {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   background-color: var(--background-primary);
   margin: 0.5rem;

@@ -34,6 +34,12 @@ export default {
   color: var(--text);
 }
 
+@media only screen and (max-width: 640px) {
+  * {
+    font-size: 0.9rem;
+  }
+}
+
 *.noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

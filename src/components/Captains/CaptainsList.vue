@@ -2,16 +2,16 @@
   <div class="captains-list">
     <div class="captains-list-legend-wrapper noselect">
       <span>position</span>
-      <span 
+      <!-- <span 
         class="captains-list-legend" 
         :class="{ 'is-active': isActive('etf2l_name') }" 
         @click="orderBy(captain_array, 'etf2l_name', 'string')"
-      >etf2l name</span>
+      >etf2l name</span> -->
       <span 
         class="captains-list-legend" 
         :class="{ 'is-active': isActive('pug_name') }" 
         @click="orderBy(captain_array, 'pug_name', 'string')"
-      >pug name</span>
+      >name</span>
       <span 
         class="captains-list-legend" 
         :class="{ 'is-active': isActive('elo') }" 
@@ -21,7 +21,7 @@
         class="captains-list-legend" 
         :class="{ 'is-active': isActive('elo_change') }" 
         @click="orderBy(captain_array, 'elo_change', 'float')"
-      >elo change</span>
+      >change</span>
       <span 
         class="captains-list-legend" 
         :class="{ 'is-active': isActive('games_total') }" 
@@ -106,7 +106,8 @@ export default {
 
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   position: -webkit-sticky; /* Safari */
   position: sticky;

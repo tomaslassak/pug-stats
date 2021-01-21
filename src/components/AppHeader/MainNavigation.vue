@@ -2,8 +2,8 @@
   <nav class="main-navigation">
     <router-link to="/" exact>players</router-link>
     <router-link to="/captains" exact>captains</router-link>
-    <router-link to="/games" exact>games</router-link>
-    <router-link to="/stats" exact>stats</router-link>
+    <!-- <router-link to="/games" exact>games</router-link> -->
+    <!-- <router-link to="/stats" exact>stats</router-link> -->
   </nav>
 </template>
 

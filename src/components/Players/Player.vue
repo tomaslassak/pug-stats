@@ -1,7 +1,7 @@
 <template>
   <li class="player">
     <span>{{ `${index + 1}.`}}</span>
-    <span>{{ player.etf2l_name}}</span>
+    <!-- <span>{{ player.etf2l_name}}</span> -->
     <span>{{ player.pug_name }}</span>
     <span>{{ player.elo.toFixed(2) }}</span>
     <span>{{ player.elo_change.toFixed(2)  }}</span>
@@ -33,7 +33,8 @@ export default {
 <style scoped>
 .player {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   background-color: var(--background-primary);
   margin: 0.5rem;
